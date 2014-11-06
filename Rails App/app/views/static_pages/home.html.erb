@@ -1,0 +1,16 @@
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
+
+  <h2>
+    <p>Thanks for opening up Jake's sample app. The sample app was built using Michael Hartl's rails guide.</p>
+
+    <p>It contains some static pages along with a users model in order for users to create logins and login into the site. I only started rails a week ago so I haven't finished the login system yet. I still need to prevent users visiting other's login pages e.g. <a href="http://localhost:3000/users/1">this</a> will take you to the user's page.</p> 
+
+    <p>The login forms are all fully tested using TDD, the passwords are all salted hashes and the site uses HTTPS site wide. The forms also protect against CSRF attacks. The site uses Bootstrap along with SASS in order to format the layout.</p>
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>
