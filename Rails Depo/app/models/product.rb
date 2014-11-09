@@ -6,4 +6,10 @@ class Product < ActiveRecord::Base
     with: %r{\.(gif|jpg|png)\Z}i,
     message: 'please use image formats gif, jpg, or png.'
   }
+  validates :title, length: {minimum: 10}
+
+  def self.latest
+    Product.order(:updated_at).last
+  end
+
 end
